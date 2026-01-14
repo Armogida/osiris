@@ -58,7 +58,7 @@ Create a file named `YourKitLadderInputFile.txt` with the following content. **T
 LadderOperation = New;
 LadderFileName = PowerPlex35GY_Spectrum_LadderInfo.xml;
 KitName = PowerPlex35GY Spectrum;
-LadderDirectory = /Users/yourusername/OSIRIS-Files/ConfigurationTools/YourKitName;
+LadderDirectory = ~/OSIRIS-Files/ConfigurationTools/YourKitName;
 NumberOfDyes = 5;
 Version = 2.7;
 Dye1 = FL;
@@ -75,7 +75,7 @@ BinsFileName = PowerPlex35GY_Bins.txt;
 PanelsFileName = PowerPlex35GY_Panels.txt;
 SearchString = PowerPlex35GY_Spectrum;
 VolumeDirectoryName = PowerPlex35GY_Spectrum;
-OutputConfigPath = /Users/yourusername/OSIRIS-Files;
+OutputConfigPath = ~/OSIRIS-Files;
 MaxExpectedAllelesPerLocusDefault = 2;
 YLinkedDefault = false;
 ILSFamilyName = PROMEGA-ILS-CC5-500-IDX;
@@ -89,7 +89,7 @@ HID = true;
 **Important Notes:**
 - **SearchString** and **VolumeDirectoryName** must have **NO SPACES**
 - They should be descriptive and unique to your kit
-- Replace paths with your actual paths
+- Replace `~` with your full home directory path if needed (e.g., `/Users/yourusername`)
 - The final line must be just a semicolon (`;`)
 - Adjust dye names, colors, and other parameters to match your kit specifications
 
@@ -194,7 +194,12 @@ This approach is more error-prone and requires manual XML editing:
 1. Rename the directory:
    ```bash
    cd ~/OSIRIS-Files/Config/Volumes/
-   mv V-20251206-123000 PowerPlex35GY_Spectrum
+   
+   # Replace with your actual timestamp folder name
+   OLD_FOLDER="V-20251206-123000"
+   NEW_FOLDER="PowerPlex35GY_Spectrum"
+   
+   mv "$OLD_FOLDER" "$NEW_FOLDER"
    ```
 
 2. Rename all files inside:

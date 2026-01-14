@@ -67,8 +67,8 @@ Color4 = RED;
 Color5 = ORANGE;
 BinsFileName = PowerPlex35GY_Bins.txt;
 PanelsFileName = PowerPlex35GY_Panels.txt;
-SearchString = PowerPlex35GY_Spectrum;           ← REQUIRED!
-VolumeDirectoryName = PowerPlex35GY_Spectrum;    ← REQUIRED!
+SearchString = PowerPlex35GY_Spectrum;
+VolumeDirectoryName = PowerPlex35GY_Spectrum;
 OutputConfigPath = /Users/yourusername/OSIRIS-Files;
 MaxExpectedAllelesPerLocusDefault = 2;
 YLinkedDefault = false;
@@ -79,6 +79,8 @@ StdControl = YourControlName;
 HID = true;
 ;
 ```
+
+**Note:** The `SearchString` and `VolumeDirectoryName` lines above are REQUIRED for OSIRIS to recognize your kit.
 
 ## For Complete Details
 
