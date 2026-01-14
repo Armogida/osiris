@@ -81,6 +81,7 @@ A public domain quality assurance software package that facilitates the assessme
 For detailed instructions on how to properly build kit definitions in OSIRIS, including how to ensure your kit appears in the kit selector, see:
 
 * **[Building Kit Definitions Guide](osiris/Documentation/Building-Kit-Definitions-Guide.md)** - Complete step-by-step guide with Mac Terminal commands
+* **[Kit Definition Quick Reference](osiris/Documentation/Kit-Definition-Quick-Reference.md)** - Quick fix for V-timestamp folders
 
 This guide is essential if you are creating new kit definitions and need to understand how to properly configure `SearchString` and `VolumeDirectoryName` parameters to ensure OSIRIS recognizes your kit.
 
