@@ -175,10 +175,15 @@ If you already have a generic kit folder like `V-20251206-123000` and want to fi
    VolumeDirectoryName = PowerPlex35GY_Spectrum;
    ```
 
-2. Delete the old generic folder:
-   ```bash
-   rm -rf ~/OSIRIS-Files/Config/Volumes/V-20251206-123000
-   ```
+### 2. Delete Old Folder
+
+```bash
+# First, list to verify which folder(s) will be deleted
+ls ~/OSIRIS-Files/Config/Volumes/V-*
+
+# If the correct folder is shown, delete it (replace V-20251206-123000 with your actual folder name)
+rm -rf ~/OSIRIS-Files/Config/Volumes/V-20251206-123000
+```
 
 3. Re-run GenerateLadderFile following Steps 3-7 above
 
@@ -195,8 +200,13 @@ This approach is more error-prone and requires manual XML editing:
 2. Rename all files inside:
    ```bash
    cd PowerPlex35GY_Spectrum
-   for file in V-20251206-123000_*; do
-     mv "$file" "PowerPlex35GY_Spectrum_${file#V-20251206-123000_}"
+   
+   # Replace V-20251206-123000 with your actual old folder name
+   OLD_NAME="V-20251206-123000"
+   NEW_NAME="PowerPlex35GY_Spectrum"
+   
+   for file in ${OLD_NAME}_*; do
+     mv "$file" "${NEW_NAME}_${file#${OLD_NAME}_}"
    done
    ```
 

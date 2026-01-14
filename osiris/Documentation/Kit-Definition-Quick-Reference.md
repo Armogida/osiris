@@ -20,7 +20,12 @@ VolumeDirectoryName = YourKitName_NoSpaces;
 ### 2. Delete Old Folder
 
 ```bash
-rm -rf ~/OSIRIS-Files/Config/Volumes/V-*
+# First, list to verify which folder(s) will be deleted
+ls ~/OSIRIS-Files/Config/Volumes/V-*
+
+# If the correct folder is shown, delete it
+# Replace V-YYYYMMDD-HHMMSS with your actual timestamp folder name
+rm -rf ~/OSIRIS-Files/Config/Volumes/V-YYYYMMDD-HHMMSS
 ```
 
 ### 3. Regenerate
